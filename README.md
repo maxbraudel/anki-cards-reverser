@@ -57,4 +57,6 @@ An Anki addon that allows users to dynamically switch between normal (front to b
 
 ## License
 
-This project is released under the [MIT License](LICENSE).
+This addon is released under the [MIT License](LICENSE).
+
+Copyright 2024 [Max Braudel](https://github.com/maxbraudel)
