@@ -14,7 +14,7 @@ def add_enabled_div(html, card, context):
         html = html.replace('class="prettify-flashcard"', 'class="prettify-flashcard reversed-mode"')
         
         # Create a div with "enabled" text and append it to the card's HTML
-        enabled_div = "<div class='enabled-marker'>Ordre inversé</div>"
+        enabled_div = "<div class='enabled-marker'>Reversed Order</div>"
         return html + enabled_div
     return html
 
@@ -49,14 +49,14 @@ def set_card_order_mode(mode):
 
 def setup_menu():
     # Create Cards Order menu
-    cards_order_menu = QMenu("Ordre des faces", mw)
+    cards_order_menu = QMenu("Card Order", mw)
     mw.form.menubar.addMenu(cards_order_menu)
     
     # Create action group for mutually exclusive options
     mode_group = QActionGroup(mw)
     
     # Normal mode action
-    normal_action = QAction("Normal (Recto > Verso)", mw)
+    normal_action = QAction("Normal (Front > Back)", mw)
     normal_action.setCheckable(True)
     normal_action.setChecked(True)
     normal_action.triggered.connect(lambda: set_card_order_mode("normal"))
@@ -64,7 +64,7 @@ def setup_menu():
     cards_order_menu.addAction(normal_action)
     
     # Reversed mode action
-    reversed_action = QAction("Inversé (Verso > Recto)", mw)
+    reversed_action = QAction("Reversed (Back > Front)", mw)
     reversed_action.setCheckable(True)
     reversed_action.triggered.connect(lambda: set_card_order_mode("reversed"))
     mode_group.addAction(reversed_action)

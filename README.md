@@ -1,38 +1,60 @@
-# PLUGIN SETUP
+# Anki Cards Reverser
 
-In the context menu:
+An Anki addon that allows users to dynamically switch between normal (front to back) and reversed (back to front) card order while studying, without modifying the original cards.
 
-Navigate to: Tools > Manage Note Types 
+## Features
 
-## CONFIGURATION FOR BASIC CARD (Normal)
+- Toggle between normal and reversed card order on the fly
+- Visual indicator showing when cards are in reversed mode
+- Seamless integration with Anki's interface
+- Support for both normal cards and "type the answer" cards
+- No modification to your original cards or note types
+- Clean and intuitive user interface
 
-Navigate to: Basic > Fields...
+## Technologies Used
 
-Rename the visible fields if they are in English:
-1: Front
-2: Back
-3: Hint
+- Python
+- Anki Add-on API
+- Qt for the user interface (via PyQt)
+- HTML/CSS for card templates
 
-Click: Save
+## Installation
 
-Click: Cards
+1. Download the `cards-reverser.ankiaddon` file from the `/Addon File/` folder
+2. Open Anki
+3. Navigate to Tools > Add-ons
+4. Click "Install from File..."
+5. Select the downloaded `cards-reverser.ankiaddon` file
+6. Restart Anki
 
-Replace the HTML content (Front Template, Back Template) and CSS (Styling) by copying the content from the corresponding files located in the plugin folder `/Card templates/Normal/`.
+## Card Template Setup
 
-## CONFIGURATION FOR BASIC CARD (TYPE THE ANSWER)
+### For Basic Cards (Normal)
 
-Repeat the same steps for the Basic (Type the Answer) card with the same fields, replacing the content of the HTML sections (Front Template, Back Template) and CSS (Styling) with the content of the corresponding files located in `/Card templates/Normal/Type the Answer`.
+1. Navigate to: Tools > Manage Note Types 
+2. Select "Basic"
+3. Click "Fields..." and ensure you have the following fields:
+   - Front
+   - Back
+   - Hint
+4. Click "Cards"
+5. Replace the templates with the provided files from `/Card templates/Normal/`:
+   - Front Template
+   - Back Template
+   - Styling (CSS)
 
-# PLUGIN INSTALLATION
+### For Type the Answer Cards
 
-Close the menu (Manage Note Types) and return to the Anki home page.
+1. Follow the same steps as above but use templates from `/Card templates/Type the Answer/`
 
-Navigate to: Tools > Add-ons
+## Usage
 
-Click: Get Add-ons
+1. A new menu "Card Order" will appear in the Anki menu bar
+2. Choose between:
+   - "Normal (Front > Back)" - standard front to back order
+   - "Reversed (Back > Front)" - reversed back to front order
+3. A green indicator will appear when in reversed mode
 
-Click: Install from File...
+## License
 
-Select `cards-reverser.ankiaddon` from the plugin folder `/Addon File/`.
-
-Enjoy!
+This project is released under the [MIT License](LICENSE).

@@ -1,5 +1,5 @@
 {
-  "name": "Inverseur de Cartes (Max Braudel)",
+  "name": "Cards Reverser (Max Braudel)",
   "author": "Max Braudel",
-  "description": "Un addon Anki qui inverse le recto et le verso des cartes pour étudier dans les deux sens."
+  "description": "An Anki addon that reverses the front and back of cards to study in both directions."
 }
